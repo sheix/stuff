@@ -35,3 +35,11 @@ rm -rf duf_0.6.2_linux_x86_64
 rm -rf duf_0.6.2_linux_x86_64.tar.gz
 
 echo "duf 0.6.2 successfully installed"
+
+
+wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+chmod +x jq-linux64
+mv jq-linux64 /usr/local/bin/jq
+
+echo "jq 1.6 successfully installed"
+
