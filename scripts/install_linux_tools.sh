@@ -43,3 +43,15 @@ mv jq-linux64 /usr/local/bin/jq
 
 echo "jq 1.6 successfully installed"
 
+wget https://github.com/sharkdp/bat/releases/download/v0.18.3/bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz
+tar -xvf bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz
+cd bat-v0.18.3-x86_64-unknown-linux-musl
+cp ./bat /usr/local/bin/
+cp ./bat.1 /usr/local/share/mam/man1
+mandb
+
+rm -rf bat-v0.18.3-x86_64-unknown-linux-musl
+rm -rf bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz
+
+echo "bat 0.18.3 successfully installed"
+
