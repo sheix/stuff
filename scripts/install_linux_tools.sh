@@ -55,3 +55,7 @@ rm -rf bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz
 
 echo "bat 0.18.3 successfully installed"
 
+curl -sS https://webinstall.dev/zoxide | bash
+echo 'eval "$(zoxide init bash)"' >> ~/.bashrc
+
+echo "zoxide successfully installed"
