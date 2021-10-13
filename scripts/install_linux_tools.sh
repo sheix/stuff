@@ -59,3 +59,11 @@ curl -sS https://webinstall.dev/zoxide | bash
 echo 'eval "$(zoxide init bash)"' >> ~/.bashrc
 
 echo "zoxide successfully installed"
+
+
+wget https://github.com/cantino/mcfly/releases/download/v0.5.9/mcfly-v0.5.9-x86_64-unknown-linux-musl.tar.gz
+tar -xvf mcfly-v0.5.9-x86_64-unknown-linux-musl.tar.gz
+cp ./macfly /usr/local/bin/
+
+echo 'eval "$(mcfly init bash)"'
+echo "mcfly successfully installed"
