@@ -63,7 +63,9 @@ echo "zoxide successfully installed"
 
 wget https://github.com/cantino/mcfly/releases/download/v0.5.9/mcfly-v0.5.9-x86_64-unknown-linux-musl.tar.gz
 tar -xvf mcfly-v0.5.9-x86_64-unknown-linux-musl.tar.gz
-cp ./macfly /usr/local/bin/
+mv ./macfly /usr/local/bin/
+
+rm -rf mcfly-v0.5.9-x86_64-unknown-linux-musl.tar.gz
 
 echo 'eval "$(mcfly init bash)"'
 echo "mcfly successfully installed"
