@@ -28,9 +28,12 @@ echo "lsd 20.1 successfully installed"
 
 
 wget https://github.com/muesli/duf/releases/download/v0.6.2/duf_0.6.2_linux_x86_64.tar.gz
-tar -xvf duf_0.6.2_linux_x86_64.tar.gz
+mkdir duf_0.6.2_linux_x86_64
+tar -xvf duf_0.6.2_linux_x86_64.tar.gz -C duf_0.6.2_linux_x86_64
 cd duf_0.6.2_linux_x86_64
 cp ./duf /usr/local/bin/
+
+cd ..
 rm -rf duf_0.6.2_linux_x86_64
 rm -rf duf_0.6.2_linux_x86_64.tar.gz
 
@@ -50,12 +53,15 @@ cp ./bat /usr/local/bin/
 cp ./bat.1 /usr/local/share/mam/man1
 mandb
 
+cd ..
 rm -rf bat-v0.18.3-x86_64-unknown-linux-musl
 rm -rf bat-v0.18.3-x86_64-unknown-linux-musl.tar.gz
 
 echo "bat 0.18.3 successfully installed"
 
 curl -sS https://webinstall.dev/zoxide | bash
+
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(zoxide init bash)"' >> ~/.bashrc
 
 echo "zoxide successfully installed"
@@ -63,7 +69,7 @@ echo "zoxide successfully installed"
 
 wget https://github.com/cantino/mcfly/releases/download/v0.5.9/mcfly-v0.5.9-x86_64-unknown-linux-musl.tar.gz
 tar -xvf mcfly-v0.5.9-x86_64-unknown-linux-musl.tar.gz
-mv ./macfly /usr/local/bin/
+mv ./mcfly /usr/local/bin/
 
 rm -rf mcfly-v0.5.9-x86_64-unknown-linux-musl.tar.gz
 
